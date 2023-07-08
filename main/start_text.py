@@ -7,9 +7,9 @@ from config import ADMIN
 async def start_cmd(bot, msg):
     txt="This is personal use bot 🙏. Do you want your own bot? 👇 Click the source code to deploy"
     btn = InlineKeyboardMarkup([[
-        InlineKeyboardButton("🤖 SOURCE CODE", url="https://t.me/+sSWbe8vjU2s1ZTRl")
+        InlineKeyboardButton("🤖 SOURCE CODE", url="https://t.me/AM_FILMS")
         ],[
-        InlineKeyboardButton("🖥️ How To Deploy", url="https://t.me/+sSWbe8vjU2s1ZTRl")
+        InlineKeyboardButton("🖥️ How To Deploy", url="https://t.me/AM_FILMS")
     ]])
     if msg.from_user.id != ADMIN:
         await msg.reply_text(text=txt, reply_markup=btn, disable_web_page_preview = True)
@@ -21,7 +21,7 @@ async def start_cmd(bot, msg):
 async def start(bot, msg, cb=True):   
     txt=f"Hai {msg.from_user.mention} i am simple rename bot with personal usage.\nthis bot is made by <b><a href=https://t.me/GUARDIANff>𝙶𝚄𝙰𝚁𝙳𝙸𝙰𝙽𝙵𝙵</a></b>"                                     
     button= [[
-        InlineKeyboardButton("🤖 Bot Updates", url="https://t.me/+sSWbe8vjU2s1ZTRl")
+        InlineKeyboardButton("🤖 Bot Updates", url="https://t.me/AM_FILMS")
         ],[
         InlineKeyboardButton("ℹ️ Help", callback_data="help"),
         InlineKeyboardButton("📡 About", callback_data="about") 
@@ -45,9 +45,9 @@ async def help(bot, msg):
 @Client.on_callback_query(filters.regex("about"))
 async def about(bot, msg):
     me=await bot.get_me()
-    Master=f"<a href=https://t.me/+sSWbe8vjU2s1ZTRl>ADHOLOKAM</a> & <a href=https://t.me/GUARDIANff>me</a>"  
-    Source="<a href=https://t.me/+sSWbe8vjU2s1ZTRl>Click Here</a>"
-    txt=f"<b>Bot Name: {me.mention}\nDeveloper: <a href=https://t.me/GUARDIANff>GUARDIANff</a>\nBot Updates: <a href=https://t.me/+sSWbe8vjU2s1ZTRl>ADHOLOKAM™</a>\nMy Master's: {Master}\nSource Code: {Source}</b>"                 
+    Master=f"<a href=https://t.me/AM_FILMS>ADHOLOKAM</a> & <a href=https://t.me/GUARDIANff>me</a>"  
+    Source="<a href=https://t.me/AM_FILMS>Click Here</a>"
+    txt=f"<b>Bot Name: {me.mention}\nDeveloper: <a href=https://t.me/GUARDIANff>GUARDIANff</a>\nBot Updates: <a href=https://t.me/AM_FILMS>ADHOLOKAM™</a>\nMy Master's: {Master}\nSource Code: {Source}</b>"                 
     button= [[        
         InlineKeyboardButton("🚫 Close", callback_data="del"),
         InlineKeyboardButton("⬅️ Back", callback_data="start") 
